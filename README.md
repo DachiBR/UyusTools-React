@@ -1,7 +1,7 @@
 # Explore the UyusTools React based website
 
 ## Website Link 
-https://main--uyustools.netlify.app/home 
+https://main--uyustools.netlify.app 
 
 ### Take a quick glance at the homepage of this website. For a comprehensive view, visit the link provided below
 ![home1](https://github.com/DachiBR/UyusTools-React/assets/75274431/53403c2e-ebb0-4859-b342-0def3f1bcd42)
