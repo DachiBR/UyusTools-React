@@ -1,7 +1,6 @@
 import React from 'react';
 import './footer.css';
 
-
 const Footer = () => (
   <footer className="footer">
     <div className="container">
@@ -9,28 +8,28 @@ const Footer = () => (
         <div className="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Our services</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Affiliate program</a></li>
+            <li><a href="about-us.html">About us</a></li>
+            <li><a href="services.html">Our services</a></li>
+            <li><a href="privacy-policy.html">Privacy policy</a></li>
+            <li><a href="affiliate-program.html">Affiliate program</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>Get help</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Payment options</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping.html">Shipping</a></li>
+            <li><a href="returns.html">Returns</a></li>
+            <li><a href="payment-options.html">Payment options</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>Online shop</h4>
           <ul>
-            <li><a href="#">dreli</a></li>
-            <li><a href="#">dreli2</a></li>
-            <li><a href="#">dreli3</a></li>
-            <li><a href="#">dreli4</a></li>
+            <li><a href="dreli.html">dreli</a></li>
+            <li><a href="dreli2.html">dreli2</a></li>
+            <li><a href="dreli3.html">dreli3</a></li>
+            <li><a href="dreli4.html">dreli4</a></li>
           </ul>
         </div>
         <div className="footer-col">
@@ -50,7 +49,7 @@ const Footer = () => (
       <div className="copyright-wrapper">
         <p>
           Designed and Developed by{' '}
-          <a href="https://example.com" target="_blank">Dachi Bregadze</a>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">Dachi Bregadze</a>
         </p>
       </div>
     </div>
