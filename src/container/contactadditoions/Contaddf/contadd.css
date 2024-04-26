@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.css');
+
+
+.contactUs {
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+}
+
+.contactUs .title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+
+}
+
+.contactUs .title h2
+{
+    color:#f1cd00; /*Gold Yellow*/
+    font-weight:500;
+
+}
+
+.form {
+    grid-area: form;
+}
+
+.info {
+    grid-area: info;
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact {
+    box-shadow:0.2px 0.2px black;
+    padding: 40px;
+    background: #262626;
+}
+
+.box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
+    margin-top:20px;
+
+}
+
+.contact h3 {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+
+}
+
+.formBox {
+    position: relative;
+    width: 100%;
+}
+
+.formBox .row50 {
+    display: flex;
+    gap: 20px;
+}
+
+.inputBox {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+    
+}
+
+.formBox .row100 .inputBox {
+    width: 100%;
+}
+
+.inputBox span {
+    color:#f1cd00; /*Gold Yellow*/
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inputBox input {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid rgb(255, 238, 0);
+    border-radius: 12px;
+}
+
+.inputBox textarea {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid rgb(255, 238, 0);
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+    border-radius: 17px;
+    
+}
+
+.inputBox input[type="submit"]
+{
+    background:rgb(0, 0, 0);
+    color:#f1cd00; /*Gold Yellow*/
+
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+
+}
+
+.inputBox ::placeholder
+{
+    color: rgb(180, 180, 180);
+}
+
+.info {
+    background: rgb(53, 53, 53);
+}
+
+.info h3 {
+    color:#f1cd00; /*Gold Yellow*/
+
+}
+
+.info .infoBox div
+{
+    display:flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.info .infoBox div span {
+    min-width: 40px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    background:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 15px; 
+}
+
+.info .infoBox div p {
+    color: white;
+    font-size: 1.1em;
+}
+.info .infoBox div a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 1.1em;
+    
+}
+
+.SocialMedia {
+    margin-top: 40px;
+    display: flex;
+}
+.SocialMedia li {
+    list-style: none;
+    margin-right: 15px;
+}
+.SocialMedia li a
+{
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    color:rgb(0, 0, 0);
+
+}
+.SocialMedia li a:hover {
+    color: #c9c9c9
+
+}
+
+.map {
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:991px)
+{
+
+    .contactUs
+    {
+        padding: 20px;
+
+    }
+    .box 
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "form"
+            "info"
+            "map";
+    }
+    .formBox .row50 
+    {
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+    }
+    .inputBox 
+    {
+        width: 100%;
+    }
+    .contact 
+    {
+        padding: 30px;
+    }
+    .map 
+    {
+        min-height: 300px;
+        padding:30px;
+    }
+
+}
+
+
+.successMessage {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    z-index: 999; /* Ensure it's above other elements */
+  }

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+.gpt3__blog-container_groupB {
+    flex: 1;
+    margin: 2rem;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+    .gpt3__blog-container_groupB {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gpt3__blog-container_groupA .gpt3__blog-container_article  {
+       width: 100%;
+    }
+
+    .gpt3__blog-heading h1 {
+        font-size: 46px;
+        line-height: 52px;
+    }
+}
+
+
+/*                */
+  
+  /* Styles for the search input */
+
+
+  /* Styles for individual articles */
+
+
+
+  
+  /* Styles for the search container */
+
+  
+  /* Styles for the search input */
+
+
+
+  .search {
+    padding: 14px;
+    width: 100%; /* Set width to 100% to make it responsive */
+    max-width: 600px; /* Set a maximum width to prevent it from becoming too wide on large screens */
+    display: flex;
+    align-items: center;
+    border-radius: 28px;
+    background-color: #161616;
+    transition: box-shadow 0.25s;
+    margin: 0 auto; /* Center the search bar horizontally */
+    margin-bottom: 2rem;
+    color:#f1cd00; /*Gold Yellow*/
+
+}
+
+
+.search-input {
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    width: 100%; /* Set width to 100% to fill the available space */
+    background-color: #161616;
+}
+
+.search-input::placeholder,
+.search-icon {
+    color: rgb(255, 219, 13);
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 650px) {
+    .search-input {
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+    .search {
+      max-width: 400px;
+
+    }
+}
+  
+  /* Styles for the articles container */
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  /* Styles for individual articles */
+  .article {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  
+  .article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .article h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  }

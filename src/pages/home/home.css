@@ -1,0 +1,212 @@
+
+.blog-heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin-top: 5rem;
+}
+
+.blog-heading h1 {
+    font-size: 62px;
+    line-height: 75px;
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+.big-text{
+    line-height: 75px;
+    color:#FFD700; 
+}
+.small-text{
+    font-size: 30px;
+    font-weight: 650;
+    color:#f4bd09;
+
+}
+
+.cta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem;
+    margin: 3rem;
+    border-radius: 1rem;
+    background: #FFD700;
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+
+.cta-content p {
+    font-family: var(--font-family);
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 500;
+}
+
+.cta-content h3 {
+    font-family: var(--font-family);
+    font-size: 24px;
+    line-height: 45px;
+    font-weight: 800;
+}
+a{
+    color:#F7F7F7;
+    text-decoration: none;
+}
+.cta-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: #F7F7F7 !important;
+    text-decoration: none !important; 
+
+}
+.cta-btn button CustomLink[class^="sc"] a {
+    color: #F7F7F7 !important;
+    text-decoration: none !important;
+}
+.cta-btn button {
+    background: #f4bd09;
+    color: #F7F7F7 !important;
+    text-decoration: none !important; 
+
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    list-style: none; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+
+.cta-btn2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    color: #F7F7F7 !important;
+    text-decoration: none !important; 
+}
+
+.cta-btn2 button {
+    background: #ffc400;
+    color: #F7F7F7;
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    list-style: none; 
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 300px;
+    color: #F7F7F7 !important;
+    text-decoration: none !important; 
+}
+
+
+
+
+.footer-heading {
+    width: 100%;
+    text-align: center;
+
+    margin-bottom: 1rem;
+}
+
+.footer-heading h1 {
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 54px;
+    line-height: 65px;
+}
+
+
+.carousel{
+    width:100%;
+    height:40rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 850px) {
+    .footer-heading h1 {
+        font-size: 44px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .footer-heading h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    .footer-heading h1 {
+        font-size: 27px;
+        line-height: 38px;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+    .blog-heading h1 {
+        font-size: 46px;
+        line-height: 52px;
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .blog-heading h1 {
+        font-size: 25px;
+        line-height: 42px;
+    }
+}
+
+
+@media screen and (max-width: 650px) {
+    .cta {
+        flex-direction: column;
+    }
+
+    .cta-btn {
+        margin: 2rem 0 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .cta {
+        margin: 4rem 2rem;
+    }
+
+    .cta-content h3 {
+        font-size: 18px;
+        line-height: 32px;
+    }
+
+    .cta-btn button {
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
