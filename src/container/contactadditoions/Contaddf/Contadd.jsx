@@ -11,7 +11,7 @@ const Contadd = () => {
     e.preventDefault();
 
     try {
-      await emailjs.sendForm('service_jgxwwho', 'template_62aqybn', e.target, 'd8_gRIdkkxU3g6UnE');
+      await emailjs.sendForm('service_t80i5d8', 'template_on4w60i', e.target, 'AaWSdPiJu6U-cIb1N');
       setMessageSent(true);
       e.target.reset();
       setTimeout(() => {
