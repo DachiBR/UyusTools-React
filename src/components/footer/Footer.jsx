@@ -1,7 +1,6 @@
 import React from 'react';
 import './footer.css';
 
-
 const Footer = () => (
   <footer className="footer">
     <div className="container">
@@ -9,37 +8,37 @@ const Footer = () => (
         <div className="footer-col">
           <h4>Company</h4>
           <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Our services</a></li>
-            <li><a href="#">Privacy policy</a></li>
-            <li><a href="#">Affiliate program</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="/services">Our services</a></li>
+            <li><a href="/privacy-policy">Privacy policy</a></li>
+            <li><a href="/affiliate-program">Affiliate program</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>Get help</h4>
           <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Shipping</a></li>
-            <li><a href="#">Returns</a></li>
-            <li><a href="#">Payment options</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/shipping">Shipping</a></li>
+            <li><a href="/returns">Returns</a></li>
+            <li><a href="/payment-options">Payment options</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>Online shop</h4>
           <ul>
-            <li><a href="#">dreli</a></li>
-            <li><a href="#">dreli2</a></li>
-            <li><a href="#">dreli3</a></li>
-            <li><a href="#">dreli4</a></li>
+            <li><a href="/shop/dreli">dreli</a></li>
+            <li><a href="/shop/dreli2">dreli2</a></li>
+            <li><a href="/shop/dreli3">dreli3</a></li>
+            <li><a href="/shop/dreli4">dreli4</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h4>Follow us</h4>
           <div className="social-links">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-youtube"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
           </div>
           <div>
             <a href="tel:+995574772486" className="contact1">+995574772486</a>
@@ -50,7 +49,7 @@ const Footer = () => (
       <div className="copyright-wrapper">
         <p>
           Designed and Developed by{' '}
-          <a href="https://example.com" target="_blank">Dachi Bregadze</a>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">Dachi Bregadze</a>
         </p>
       </div>
     </div>
