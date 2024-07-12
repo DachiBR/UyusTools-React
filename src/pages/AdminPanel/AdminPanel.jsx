@@ -45,9 +45,10 @@ const AdminPanel = () => {
       <input type="file" onChange={handleImageChange} />
       <button onClick={handleUpload}>Upload Image</button>
       <progress value={progress} max="100" />
-      {imageUrl && <img src={imageUrl} alt="Uploaded Image" />} {/* Adjusted alt attribute */}
+      {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
     </div>
   );
 };
 
 export default AdminPanel;
+
