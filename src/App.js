@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { About, Home, Products, Contact } from './pages';
 import { Route, Routes, Navigate } from "react-router-dom";
 import AdminPanel from './pages/AdminPanel/AdminPanel';
 import Login from './pages/Login/Login';
+import NotFound from './pages/NotFound/NotFound'; // Make sure this component exists
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -25,8 +25,7 @@ function App() {
           path="/admin" 
           element={isAuthenticated ? <AdminPanel addProduct={addProduct} /> : <Navigate to="/login" />} 
         />
-        {/* Handle all other routes */}
-        <Route path="*" element={<div>404 - Not Found</div>} />
+        <Route path="*" element={<NotFound />} /> {/* Handle all other routes */}
       </Routes>
     </div>
   );
