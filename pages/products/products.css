@@ -1,0 +1,36 @@
+.blog-heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-heading h1 {
+    font-size: 62px;
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+.big-text{
+    color:#FFD700; 
+}
+
+
+@media screen and (max-width: 700px) {
+    .blog-heading h1 {
+        font-size: 46px;
+        line-height: 52px;
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .blog-heading h1 {
+        font-size: 48px;
+        line-height: 23px;
+    }
+
+    .small-text {
+        font-size: 30px;
+        line-height: 37px;
+    }
+}
