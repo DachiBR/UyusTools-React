@@ -3,7 +3,6 @@ import { About, Home, Products, Contact } from './pages';
 import { Route, Routes, Navigate } from "react-router-dom";
 import AdminPanel from './pages/AdminPanel/AdminPanel';
 import Login from './pages/Login/Login';
-import NotFound from './pages/NotFound/NotFound'; // Import the NotFound component
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -26,7 +25,8 @@ function App() {
           path="/admin" 
           element={isAuthenticated ? <AdminPanel addProduct={addProduct} /> : <Navigate to="/login" />} 
         />
-        <Route path="*" element={<NotFound />} /> {/* Handle all other routes */}
+        {/* Handle all other routes */}
+        <Route path="*" element={<div>404 - Not Found</div>} />
       </Routes>
     </div>
   );
