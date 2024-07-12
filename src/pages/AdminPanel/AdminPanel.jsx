@@ -45,7 +45,8 @@ const AdminPanel = () => {
       <input type="file" onChange={handleImageChange} />
       <button onClick={handleUpload}>Upload Image</button>
       <progress value={progress} max="100" />
-      {imageUrl && <img src={imageUrl} alt="Uploaded Image" />}
+ {imageUrl && <img src={imageUrl} alt="Uploaded product" />}
+
     </div>
   );
 };
