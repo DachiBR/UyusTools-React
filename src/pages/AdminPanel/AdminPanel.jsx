@@ -3,7 +3,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../firebase';
 import './AdminPanel.css';
 
-const AdminPanel = () => {
+const AdminPanel = ({ addArticle }) => {
   const [image, setImage] = useState(null);
   const [progress, setProgress] = useState(0);
   const [imageUrl, setImageUrl] = useState('');
@@ -33,6 +33,10 @@ const AdminPanel = () => {
         () => {
           getDownloadURL(uploadTask.snapshot.ref).then(url => {
             setImageUrl(url);
+            addArticle({
+              imgUrl: url, // Pass the URL to Cards.jsx
+              // Add additional fields as needed
+            });
           });
         }
       );
@@ -45,11 +49,9 @@ const AdminPanel = () => {
       <input type="file" onChange={handleImageChange} />
       <button onClick={handleUpload}>Upload Image</button>
       <progress value={progress} max="100" />
- {imageUrl && <img src={imageUrl} alt="Uploaded product" />}
-
+      {imageUrl && <img src={imageUrl} alt="Uploaded product" />}
     </div>
   );
 };
 
 export default AdminPanel;
-
