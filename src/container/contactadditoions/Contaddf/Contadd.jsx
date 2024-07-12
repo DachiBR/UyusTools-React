@@ -9,9 +9,19 @@ const Contadd = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     try {
-      await emailjs.sendForm('service_t80i5d8', 'template_on4w60i', e.target, 'AaWSdPiJu6U-cIb1N');
+      const firstName = e.target.from_name.value;
+      const lastName = e.target.to_name.value;
+      const email = e.target.reply_to.value;
+      const message = e.target.message.value;
+  
+      await emailjs.send('service_t80i5d8', 'template_on4w60i', {
+        from_name: 'Uyustools',
+        to_name: `${firstName} ${lastName}`,
+        message: message
+      }, 'AaWSdPiJu6U-cIb1N');
+  
       setMessageSent(true);
       e.target.reset();
       setTimeout(() => {
@@ -21,6 +31,7 @@ const Contadd = () => {
       console.error('Error sending message:', error);
     }
   };
+  
 
   return (
     <div className="contactUs">
@@ -90,7 +101,7 @@ const Contadd = () => {
           </div>
         </div>
         <div className="contact map">
-          <iframe title="Google Map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190570.9834491337!2d44.641956" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190570.9834491337!2d44.641956467338616!3d41.7276044080188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2sTbilisi!5e0!3m2!1sen!2sge!4v1712932701890!5m2!1sen!2sge" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       {isMessageSent && (

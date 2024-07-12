@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+/* Styles for the articles grid */
 .gpt3__blog-container_groupB {
     flex: 1;
     margin: 2rem;
-    display:grid;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 2rem;
 }
@@ -12,8 +14,8 @@
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .gpt3__blog-container_groupA .gpt3__blog-container_article  {
-       width: 100%;
+    .gpt3__blog-container_groupA .gpt3__blog-container_article {
+        width: 100%;
     }
 
     .gpt3__blog-heading h1 {
@@ -22,25 +24,8 @@
     }
 }
 
-
-/*                */
-  
-  /* Styles for the search input */
-
-
-  /* Styles for individual articles */
-
-
-
-  
-  /* Styles for the search container */
-
-  
-  /* Styles for the search input */
-
-
-
-  .search {
+/* Styles for the search container */
+.search {
     padding: 14px;
     width: 100%; /* Set width to 100% to make it responsive */
     max-width: 600px; /* Set a maximum width to prevent it from becoming too wide on large screens */
@@ -51,11 +36,10 @@
     transition: box-shadow 0.25s;
     margin: 0 auto; /* Center the search bar horizontally */
     margin-bottom: 2rem;
-    color:#f1cd00; /*Gold Yellow*/
-
+    color: #f1cd00; /* Gold Yellow */
 }
 
-
+/* Styles for the search input */
 .search-input {
     font-size: 16px;
     font-family: 'Lexend', sans-serif;
@@ -64,7 +48,7 @@
     outline: none;
     border: none;
     width: 100%; /* Set width to 100% to fill the available space */
-    background-color: #161616;
+    background-color: #15114343;
 }
 
 .search-input::placeholder,
@@ -78,48 +62,44 @@
         font-size: 14px; /* Decrease font size for smaller screens */
     }
     .search {
-      max-width: 400px;
-
+        max-width: 400px;
     }
 }
-  
-  /* Styles for the articles container */
-  .articles {
+
+/* Styles for the articles container */
+.articles {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  /* Styles for individual articles */
-  .article {
+}
+
+/* Styles for individual articles */
+.article {
     width: 48%;
     margin-bottom: 20px;
-  }
-  
-  .article img {
+}
+
+.article img {
     width: 100%;
     height: auto;
     border-radius: 5px;
-  }
-  
-  .article h3 {
+}
+
+.article h3 {
     margin-top: 10px;
     font-size: 18px;
-  }
+}
 
-
-
-
-  .categories {
+/* Styles for the categories container */
+.categories {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 20px;
-    
-  }
-  
-  .categories button {
-    background-color: #ffd900; /* Green */
+}
+
+.categories button {
+    background-color: #ffd900; /* Yellow */
     border: none;
     color: rgb(0, 0, 0);
     padding: 10px 20px;
@@ -131,18 +111,48 @@
     cursor: pointer;
     border-radius: 8px;
     margin: 20px;
-  }
-  
-  .categories button.active {
-    background-color: #000000; /* Blue */
-    color: white;
-  }
-  
-  .categories button:hover {
-    background-color: #b39800; /* Darker Green */
-  }
-  
-  .categories button.active:hover {
-    background-color: #3a3a3a; /* Blue */
+}
 
-  }
+.categories button.active {
+    background-color: #000000; /* Black */
+    color: white;
+}
+
+.categories button:hover {
+    background-color: #b39800; /* Darker Yellow */
+}
+
+.categories button.active:hover {
+    background-color: #3a3a3a; /* Darker Black */
+}
+
+/* Styles for the pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: #ffd900; /* Yellow */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.pagination button.active {
+    background-color: #000000; /* Black */
+    color: white;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #b39800; /* Darker Yellow */
+}

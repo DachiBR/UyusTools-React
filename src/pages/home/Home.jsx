@@ -35,7 +35,7 @@ const Home = () => {
     <div className="blog-heading">
 
         <h1 >
-          <span className="big-text">Welcome to UyusTools</span> <br />
+          <span className="big-text">მოგესალმებით UyusTools - ზე</span> <br />
           <span className="small-text">One Brand Long Cooperation</span>
         </h1>
 

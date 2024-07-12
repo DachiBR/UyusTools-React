@@ -1,0 +1,23 @@
+/* src/pages/AdminPanel/AdminPanel.css */
+.admin-panel {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .admin-panel input {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .admin-panel button {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  .admin-panel img {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+  
