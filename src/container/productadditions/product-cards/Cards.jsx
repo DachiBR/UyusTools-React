@@ -257,14 +257,7 @@ const Cards = () => {
     { imgUrl: product202, date: "YFP010", text: "ADJUSTABLE WRENCH", category: "Category 2", agwera: "agwera 202" },
     { imgUrl: product203, date: "YTM8SU", text: "UNIVERSAL SOCKET WRENCH", category: "Category 3", agwera: "agwera 203" }
   ];
-import React, { useState } from 'react';
-import Article from './Article'; // Adjust the import based on your file structure
-
-const Cards = ({ articles, articlesPerPage }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [currentPage, setCurrentPage] = useState(1);
-
+ // Filter articles based on search query and selected category
   const filteredArticles = articles.filter(article =>
     (selectedCategory === 'all' || article.category === selectedCategory) && 
     article.text.toLowerCase().includes(searchQuery.toLowerCase())
@@ -275,7 +268,7 @@ const Cards = ({ articles, articlesPerPage }) => {
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
       setCurrentPage(page);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
     }
   };
 
@@ -289,10 +282,11 @@ const Cards = ({ articles, articlesPerPage }) => {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
-    setCurrentPage(1);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setCurrentPage(1); // Reset to the first page when category changes
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
   };
 
+  // Calculate the articles to show on the current page
   const startIndex = (currentPage - 1) * articlesPerPage;
   const currentArticles = filteredArticles.slice(startIndex, startIndex + articlesPerPage);
 
@@ -309,6 +303,13 @@ const Cards = ({ articles, articlesPerPage }) => {
         />
       </div>
 
+      <div className="categories">
+        <button className={selectedCategory === 'all' ? 'active' : ''} onClick={() => handleCategoryChange('all')}>yvela productis naxva</button>
+        <button className={selectedCategory === 'category1' ? 'active' : ''} onClick={() => handleCategoryChange('category1')}>Pirveli Kategoria</button>
+        <button className={selectedCategory === 'category2' ? 'active' : ''} onClick={() => handleCategoryChange('category2')}>Meore kategoria</button>
+        {/* Add more buttons for other categories as needed */}
+      </div>
+
       <div className="gpt3__blog-container_groupB">
         {currentArticles.map((article, index) => (
           <Article
@@ -316,6 +317,7 @@ const Cards = ({ articles, articlesPerPage }) => {
             imgUrl={article.imgUrl}
             date={article.date}
             text={article.text}
+            agwera={article.agwera}
           />
         ))}
       </div>
