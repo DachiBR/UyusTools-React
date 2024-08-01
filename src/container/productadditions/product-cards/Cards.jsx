@@ -257,8 +257,7 @@ const Cards = () => {
     { imgUrl: product202, date: "YFP010", text: "ADJUSTABLE WRENCH", category: "Category 2", agwera: "agwera 202" },
     { imgUrl: product203, date: "YTM8SU", text: "UNIVERSAL SOCKET WRENCH", category: "Category 3", agwera: "agwera 203" }
   ];
-
-  // Filter articles based on search query and selected category
+// Filter articles based on search query and selected category
 const filteredArticles = articles.filter(article =>
   (selectedCategory === 'all' || article.category === selectedCategory) && 
   article.text.toLowerCase().includes(searchQuery.toLowerCase())
@@ -342,3 +341,4 @@ return (
 );
 
 export default Cards;
+
