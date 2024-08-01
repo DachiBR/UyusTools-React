@@ -36,7 +36,7 @@ const Home = () => {
 
         <h1 >
           <span className="big-text">მოგესალმებით UyusTools - ზე</span> <br />
-          <span className="small-text">One Brand Long Cooperation</span>
+          <span className="small-text">ერთი ბრენდი, ხანგრძლივი თანამშრომლობა</span>
         </h1>
 
     </div>
