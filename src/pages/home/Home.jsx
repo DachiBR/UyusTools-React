@@ -35,8 +35,8 @@ const Home = () => {
     <div className="blog-heading">
 
         <h1 >
-          <span className="big-text">მოგესალმებით UyusTools - ზე</span> <br />
-          <span className="small-text">ერთი ბრენდი, ხანგრძლივი თანამშრომლობა</span>
+          <span className="big-text"> მოგესალმებით UyusTools - ზე </span> <br />
+          <span className="small-text"> ერთი ბრენდი, ხანგრძლივი თანამშრომლობა </span>
         </h1>
 
     </div>
@@ -44,12 +44,12 @@ const Home = () => {
     <div className="cta">
 
       <div className="cta-content">
-          <p>Incredible History of our company </p>
-          <h3>Do you want to hear about our company ? Then click here!</h3>
+          <p> ჩვენი კომპანიის ისტორია </p>
+          <h3> გსურთ ჩვენი კომპანიის შესახებ გაიგოთ? მაშინ დააკლიკეთ აქ! </h3>
       </div>
 
       <div className="cta-btn">
-        <button type="button"><CustomLink to="/about">About</CustomLink></button>
+        <button type="button"><CustomLink to="/about"> ჩვენს შესახებ </CustomLink></button>
       </div>
 
     </div>
@@ -58,10 +58,10 @@ const Home = () => {
 
     <div className="footer-heading">
       
-      <h1 className="big-text">Do you want to see our prodcuts, then click here ! </h1>
+      <h1 className="big-text"> გსურთ ჩვენი პროდუქციის ნახვა? მაშინ დაკლიკეთ აქ! </h1>
 
       <div className="cta-btn2">
-        <button type="button"><CustomLink to="/products">Products</CustomLink></button>
+        <button type="button"><CustomLink to="/products"> პროდუქცია </CustomLink></button>
       </div>
 
 
