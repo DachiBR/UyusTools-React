@@ -25,7 +25,7 @@ const SliderComponent = ({ data }) => {
   return (
     <div className="slider-container"> 
 
-      <div className="add1"><h1>Place your ad here</h1></div>
+      <div className="add1"></h1></div>
 
       <div className="slider">
         <BsArrowLeftCircleFill onClick={prevSlide} className="arrow arrow-left" />
@@ -51,7 +51,7 @@ const SliderComponent = ({ data }) => {
         </div>
       </div>
 
-          <div className="add2"><h1>Place your ad here</h1></div>
+          <div className="add2"></div>
 
     </div>
   );
