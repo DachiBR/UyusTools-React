@@ -257,88 +257,94 @@ const Cards = () => {
     { imgUrl: product202, date: "YFP010", text: "ADJUSTABLE WRENCH", category: "Category 2", agwera: "agwera 202" },
     { imgUrl: product203, date: "YTM8SU", text: "UNIVERSAL SOCKET WRENCH", category: "Category 3", agwera: "agwera 203" }
   ];
-// Filter articles based on search query and selected category
-const filteredArticles = articles.filter(article =>
-  (selectedCategory === 'all' || article.category === selectedCategory) && 
-  article.text.toLowerCase().includes(searchQuery.toLowerCase())
-);
+import React, { useState } from 'react';
+import Article from './Article'; // Adjust the import based on your file structure
 
-const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
+const Cards = ({ articles, articlesPerPage }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [currentPage, setCurrentPage] = useState(1);
 
-const handlePageChange = (page) => {
-  if (page >= 1 && page <= totalPages) {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
-  }
-};
+  const filteredArticles = articles.filter(article =>
+    (selectedCategory === 'all' || article.category === selectedCategory) && 
+    article.text.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
-const getPaginationButtons = () => {
-  const pages = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pages.push(i);
-  }
-  return pages;
-};
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
 
-const handleCategoryChange = (category) => {
-  setSelectedCategory(category);
-  setCurrentPage(1); // Reset to the first page when category changes
-  window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
-};
+  const handlePageChange = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
 
-// Calculate the articles to show on the current page
-const startIndex = (currentPage - 1) * articlesPerPage;
-const currentArticles = filteredArticles.slice(startIndex, startIndex + articlesPerPage);
+  const getPaginationButtons = () => {
+    const pages = [];
+    for (let i = 1; i <= totalPages; i++) {
+      pages.push(i);
+    }
+    return pages;
+  };
 
-return (
-  <div className="container">
-    <div className="search">
-      <span className="search-icon material-symbols-outlined">search</span>
-      <input
-        className="search-input"
-        type="search"
-        placeholder="Search..."
-        value={searchQuery}
-        onChange={e => setSearchQuery(e.target.value)}
-      />
-    </div>
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
-    <div className="gpt3__blog-container_groupB">
-      {currentArticles.map((article, index) => (
-        <Article
-          key={index}
-          imgUrl={article.imgUrl}
-          date={article.date}
-          text={article.text}
+  const startIndex = (currentPage - 1) * articlesPerPage;
+  const currentArticles = filteredArticles.slice(startIndex, startIndex + articlesPerPage);
+
+  return (
+    <div className="container">
+      <div className="search">
+        <span className="search-icon material-symbols-outlined">search</span>
+        <input
+          className="search-input"
+          type="search"
+          placeholder="Search..."
+          value={searchQuery}
+          onChange={e => setSearchQuery(e.target.value)}
         />
-      ))}
-    </div>
+      </div>
 
-    <div className="pagination">
-      <button
-        onClick={() => handlePageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-      >
-        Previous
-      </button>
-      {getPaginationButtons().map((page, index) => (
+      <div className="gpt3__blog-container_groupB">
+        {currentArticles.map((article, index) => (
+          <Article
+            key={index}
+            imgUrl={article.imgUrl}
+            date={article.date}
+            text={article.text}
+          />
+        ))}
+      </div>
+
+      <div className="pagination">
         <button
-          key={index}
-          className={currentPage === page ? 'active' : ''}
-          onClick={() => handlePageChange(page)}
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
         >
-          {page}
+          Previous
         </button>
-      ))}
-      <button
-        onClick={() => handlePageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-      >
-        Next
-      </button>
+        {getPaginationButtons().map((page, index) => (
+          <button
+            key={index}
+            className={currentPage === page ? 'active' : ''}
+            onClick={() => handlePageChange(page)}
+          >
+            {page}
+          </button>
+        ))}
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Cards;
-
