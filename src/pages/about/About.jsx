@@ -30,46 +30,46 @@ const About = () => {
     <>
       <Navbar />
 
-      <div className="gpt3__blog-heading">
-        <h1 className="gradient__text">Welcome to Uyustools<br /> </h1>
-      </div>
+<div className="gpt3__blog-heading">
+  <h1 className="gradient__text"> მოგესალმებით Uyustools-ში <br /> </h1>
+</div>
 
-      <div className="gpt3__blog-heading">
-        <p className="gradient__text">At UYUSTOOLS, we extend a warm welcome to all our visitors, partners, and customers. <br /> </p>
-      </div>
-      <Aboutadd />
+<div className="gpt3__blog-heading">
+  <p className="gradient__text">UYUSTOOLS-ში თბილად ვხვდებით ჩვენს ყველა სტუმარს, პარტნიორს და მომხმარებელს. <br /> </p>
+</div>
+<Aboutadd />
 
-      <div className="gpt3__cta">
+<div className="gpt3__cta">
 
-        <div className="gpt3__cta-content">
-          <p>Incredible History of our company </p>
-          <h3>Do you want to contact us? Then click here!</h3>
-        </div>
+  <div className="gpt3__cta-content">
+    <p> ჩვენი კომპანიის ისტორია </p>
+    <h3>გსურთ დაგვიკავშირდეთ? მაშინ დააჭირეთ აქ!</h3>
+  </div>
 
-        <div className="gpt3__cta-btn">
-          <button type="button"><CustomLink to="/Contact">Contact</CustomLink></button>
-        </div>
+  <div className="gpt3__cta-btn">
+    <button type="button"><CustomLink to="/Contact">კონტაქტი</CustomLink></button>
+  </div>
 
-      </div>
+</div>
 
-      <SliderComponent data={sliderData} />
+<SliderComponent data={sliderData} />
 
+<div className="gpt3__cta">
 
-      <div className="gpt3__cta">
+  <div className="gpt3__cta-content">
+    <p>ჩვენი კომპანიის ისტორია </p>
+    <h3>გსურთ იხილოთ ჩვენი პროდუქტები? მაშინ დააჭირეთ აქ!</h3>
+  </div>
 
-      <div className="gpt3__cta-content">
-        <p>Incredible History of our company </p>
-        <h3>Do you want to see our products? Then click here!</h3>
-      </div>
+  <div className="gpt3__cta-btn">
+    <button type="button"><CustomLink to="/products"> პროდუქცია </CustomLink></button>
+  </div>
 
-      <div className="gpt3__cta-btn">
-        <button type="button"><CustomLink to="/products">Products</CustomLink></button>
-      </div>
+</div>  
 
-      </div>  
-      
-      <Footer />
-    </>
+<Footer />
+</>
+
   );
 };
 
