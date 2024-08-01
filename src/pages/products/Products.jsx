@@ -10,7 +10,7 @@ const Products = ({ articles }) => {
 
       <div className="blog-heading">
         <h1>
-          <span className="big-text"> Our Products </span>
+          <span className="big-text"> პროდუქცია </span>
         </h1>
       </div>
 
