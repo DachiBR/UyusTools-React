@@ -6,26 +6,28 @@ import homeImage from "../../../assets/homeadd.jpg";
 
 const Homeadd = () => {
   return (
-    <div className="gpt3__possibility section__padding" id="possibilty">
-    <div className="gpt3__possibility-image">
-      <img src={homeImage} alt="possibility" srcSet="" />
-    </div>
-    <div className="gpt3__possibility-content">
-      <h4>Shop with confidence at UyusTool </h4>
-      <h1 className="gradient__text">
-        Experience the quality and reliability of Uyustools today. 
-      </h1>
-      <p>
-       At Uyustools, we pride ourselves on providing users with reliable and durable tools.
-       Our comprehensive product line includes power tools, power tool accessories, hand tools, hardware tools, and more. 
-       Backed by an attentive service system encompassing quality control, packaging, storage, transportation, marketing support, 
-       and after-sales service, we've earned our reputation as a top company in the Chinese overseas tool industry.
-      </p>
-      <h4>
-      Request Early Access to Get Started
-      </h4>
-    </div>
+    <div className="gpt3__possibility section__padding" id="possibility">
+  <div className="gpt3__possibility-image">
+    <img src={homeImage} alt="საუკეთესო შესაძლებლობები" />
   </div>
+  <div className="gpt3__possibility-content">
+    <h4>იყავით დარწმუნებული UyusTool-ის მაღაზიაში</h4>
+    <h1 className="gradient__text">
+      გამოცადეთ Uyustools-ის ხარისხი და სანდოობა დღესვე.
+    </h1>
+    <p>
+      Uyustools-ში ჩვენ ვამაყობთ მომხმარებლებისთვის სანდო და გამძლე ხელსაწყოების მიწოდებით.
+      ჩვენი ფართო პროდუქციის ხაზი მოიცავს ელექტრო ხელსაწყოებს, ელექტრო ხელსაწყოების აქსესუარებს, ხელის ხელსაწყოებს, 
+      საყოფაცხოვრებო ხელსაწყოებს და სხვა. ხარისხის კონტროლის, შეფუთვის, შესანახი, ტრანსპორტირების, 
+      მარკეტინგის მხარდაჭერისა და გაყიდვების შემდგომი მომსახურების სისტემით, ჩვენ დავამკვიდრეთ ჩვენი რეპუტაცია, 
+      როგორც ჩინეთის საზღვარგარეთულ ხელსაწყოების ინდუსტრიის ერთ-ერთი წამყვანი კომპანია.
+    </p>
+    <h4>
+      მოითხოვეთ ადრეული წვდომა დასაწყებად
+    </h4>
+  </div>
+</div>
+
   )
 }
 
