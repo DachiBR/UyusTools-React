@@ -36,53 +36,53 @@ const Contadd = () => {
   return (
     <div className="contactUs">
       <div className="title">
-        <h2>Free Consultation</h2>
+        <h2>უფასო კონსულტაცია</h2>
       </div>
       <div className="box">
         <div className="contact form">
-          <h3>Send a Message</h3>
+          <h3>გაგზავნეთ შეტყობინება</h3>
           <form onSubmit={handleSubmit}>
             <div className="formBox">
               <div className="row50">
                 <div className="inputBox">
-                  <span>First name</span>
-                  <input type="text" name="from_name" placeholder="First Name" />
+                  <span>სახელი</span>
+                  <input type="text" name="from_name" placeholder="სახელი" />
                 </div>
                 <div className="inputBox">
-                  <span>Last name</span>
-                  <input type="text" name="to_name" placeholder="Last Name" />
+                  <span>გვარი</span>
+                  <input type="text" name="to_name" placeholder="გვარი" />
                 </div>
               </div>
               <div className="row50">
                 <div className="inputBox">
-                  <span>Email</span>
+                  <span>ელ.ფოსტა</span>
                   <input type="email" name="reply_to" placeholder="example@gmail.com" />
                 </div>
                 <div className="inputBox">
-                  <span>Mobile</span>
+                  <span>მობილური</span>
                   <input type="tel" name="UyusTools" placeholder="+995-555-555-555" />
                 </div>
               </div>
               <div className="row100">
                 <div className="inputBox">
-                  <span>Message</span>
-                  <textarea name="message" placeholder="Write your message here..."></textarea>
+                  <span>შეტყობინება</span>
+                  <textarea name="message" placeholder="შეტყობინების ტექსტი..."></textarea>
                 </div>
               </div>
               <div className="row100">
                 <div className="inputBox">
-                  <input type="submit" value="Send" />
+                  <input type="submit" value="გაგზავნა" />
                 </div>
               </div>
             </div>
           </form>
         </div>
         <div className="contact info">
-          <h3>Contact info</h3>
+          <h3>საკონტაქტო ინფორმაცია</h3>
           <div className="infoBox">
             <div>
               <span><IonIcon icon={locationOutline} /></span>
-              <p>Georgia, Tbilisi <br /></p>
+              <p>საქართველო, თბილისი <br /></p>
             </div>
             <div>
               <span><IonIcon icon={mailOutline} /></span>
@@ -101,12 +101,12 @@ const Contadd = () => {
           </div>
         </div>
         <div className="contact map">
-          <iframe title="Map of Tbilisi" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190570.9834491337!2d44.641956467338616!3d41.7276044080188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2sTbilisi!5e0!3m2!1sen!2sge!4v1712932701890!5m2!1sen!2sge" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <iframe title="თბილისის რუკა" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d190570.9834491337!2d44.641956467338616!3d41.7276044080188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2sTbilisi!5e0!3m2!1sen!2sge!4v1712932701890!5m2!1sen!2sge" style={{border:0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       {isMessageSent && (
         <div className="successMessage">
-          Message sent successfully :)
+          შეტყობინება წარმატებით გაიგზავნა :)
         </div>
       )}
     </div>
