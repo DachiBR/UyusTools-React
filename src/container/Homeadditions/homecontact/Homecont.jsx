@@ -13,12 +13,13 @@ function CustomLink({ to, children }) {
 }
 const Homecont = () => {
   return (
-    <div className="gpt3__footer-heading">
-      <h1 className="gradient__text">Do you want to contact us?, then click here !   </h1>
-      <div className="gpt3__cta-btn">
-      <CustomLink to="/contact"><button type="button">Contact</button></CustomLink>
-      </div>
-    </div>
+<div className="gpt3__footer-heading">
+  <h1 className="gradient__text"> გსურთ დაგვიკავშირდეთ? მაშინ დაკლიკეთ აქ! </h1>
+  <div className="gpt3__cta-btn">
+    <CustomLink to="/contact"><button type="button"> დაგვიკავშირდით </button></CustomLink>
+  </div>
+</div>
+
 
 
   )
