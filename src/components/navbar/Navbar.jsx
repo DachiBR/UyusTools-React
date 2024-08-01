@@ -15,10 +15,10 @@ function CustomLink({ to, children }) {
 
 const Menu = () => (
   <>
-    <CustomLink to="/home">Home</CustomLink>
-    <CustomLink to="/products">Products</CustomLink>
-    <CustomLink to="/about">About</CustomLink>
-    <CustomLink to="/contact">Contact</CustomLink>
+    <CustomLink to="/home">მთავარი</CustomLink>
+    <CustomLink to="/products">პროდუქცია</CustomLink>
+    <CustomLink to="/about">ჩვენს შესახებ</CustomLink>
+    <CustomLink to="/contact">კონტაქტი</CustomLink>
   </>
 );
 
