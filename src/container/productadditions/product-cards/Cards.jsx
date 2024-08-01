@@ -303,13 +303,13 @@ const Cards = () => {
         />
       </div>
 
-      <div className="categories">
+      {/* <div className="categories">
         <button className={selectedCategory === 'all' ? 'active' : ''} onClick={() => handleCategoryChange('all')}>yvela productis naxva</button>
         <button className={selectedCategory === 'category1' ? 'active' : ''} onClick={() => handleCategoryChange('category1')}>Pirveli Kategoria</button>
         <button className={selectedCategory === 'category2' ? 'active' : ''} onClick={() => handleCategoryChange('category2')}>Meore kategoria</button>
-        {/* Add more buttons for other categories as needed */}
       </div>
-
+      */}
+      
       <div className="gpt3__blog-container_groupB">
         {currentArticles.map((article, index) => (
           <Article
