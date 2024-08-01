@@ -47,7 +47,7 @@ import {
 
 const Cards = () => {
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 16; // Maximum number of articles per page
 
@@ -67,7 +67,7 @@ const Cards = () => {
     { imgUrl: product12, date: "ALR011", text: "SHAPE NEEDLE NOSE PLIERS", category: "Category 3", agwera: "agwera 12" },
     { imgUrl: product13, date: "ALS910", text: "WELDING LOCKING PLIERS", category: "Category 1", agwera: "agwera 13" },
     { imgUrl: product14, date: "ALU615", text: "COMBINATION PLIERS", category: "Category 2", agwera: "agwera 14" },
-    { imgUrl: product15, date: "ALU715", text: "-", category: "Category 3", agwera: "agwera 15" },
+    { imgUrl: product15, date: "ALU715", text: "COMBINATION PLIERS", category: "Category 3", agwera: "agwera 15" },
     { imgUrl: product16, date: "ALU815", text: "COMBINATION PLIERS", category: "Category 1", agwera: "agwera 16" },
     { imgUrl: product17, date: "AMO412", text: "CHAINSAW ATTACHMENT FOR ANGLE GRINDER", category: "Category 2", agwera: "agwera 17" },
     { imgUrl: product18, date: "AMR004", text: "NYLON CABLE TIES", category: "Category 3", agwera: "agwera 18" },
@@ -257,7 +257,7 @@ const Cards = () => {
     { imgUrl: product202, date: "YFP010", text: "ADJUSTABLE WRENCH", category: "Category 2", agwera: "agwera 202" },
     { imgUrl: product203, date: "YTM8SU", text: "UNIVERSAL SOCKET WRENCH", category: "Category 3", agwera: "agwera 203" }
   ];
- // Filter articles based on search query and selected category
+  // Filter articles based on search query and selected category
   const filteredArticles = articles.filter(article =>
     (selectedCategory === 'all' || article.category === selectedCategory) && 
     article.text.toLowerCase().includes(searchQuery.toLowerCase())
@@ -280,11 +280,6 @@ const Cards = () => {
     return pages;
   };
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
-    setCurrentPage(1); // Reset to the first page when category changes
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
-  };
 
   // Calculate the articles to show on the current page
   const startIndex = (currentPage - 1) * articlesPerPage;
@@ -302,14 +297,14 @@ const Cards = () => {
           onChange={e => setSearchQuery(e.target.value)}
         />
       </div>
-
-      {/* <div className="categories">
+{/*
+      <div className="categories">
         <button className={selectedCategory === 'all' ? 'active' : ''} onClick={() => handleCategoryChange('all')}>yvela productis naxva</button>
         <button className={selectedCategory === 'category1' ? 'active' : ''} onClick={() => handleCategoryChange('category1')}>Pirveli Kategoria</button>
         <button className={selectedCategory === 'category2' ? 'active' : ''} onClick={() => handleCategoryChange('category2')}>Meore kategoria</button>
-      </div>
-      */}
-      
+    
+      </div> */}
+
       <div className="gpt3__blog-container_groupB">
         {currentArticles.map((article, index) => (
           <Article
